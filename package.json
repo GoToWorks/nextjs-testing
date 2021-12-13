@@ -5,15 +5,47 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --env=jsdom --verbose"
   },
   "dependencies": {
-    "next": "12.0.7",
+    "autoprefixer": "^10.4.0",
+    "axios": "^0.21.1",
+    "msw": "^0.36.3",
+    "next": "^11.1.2",
+    "next-page-tester": "^0.30.0",
+    "postcss": "^8.4.4",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "swr": "^1.1.0",
+    "tailwindcss": "^3.0.1"
   },
   "devDependencies": {
+    "@testing-library/dom": "^8.11.1",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.12",
+    "@types/react": "^17.0.37",
+    "babel-jest": "^27.4.4",
     "eslint": "8.4.1",
-    "eslint-config-next": "12.0.7"
+    "eslint-config-next": "12.0.7",
+    "jest": "^27.4.4",
+    "jest-css-modules": "^2.1.0",
+    "typescript": "^4.5.3"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/.next/",
+      "<rootDir>/node_modules/"
+    ],
+    "moduleNameMapper": {
+      "\\.(css)$": "<rootDir>/node_modules/jest-css-modules"
+    }
   }
 }

@@ -11,7 +11,7 @@ interface STATICPROPS {
 
 const axiosFetcher = async () => {
   const result = await axios.get<TASK[]>(
-    'https:/jsonplaceholder.typicode.com/todos/?_limit=10'
+    'https://jsonplaceholder.typicode.com/todos/?_limit=10'
   )
   return result.data
 }

@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 
 export const getAllPostData = async () => {
   const res = await fetch(
-    new URL('https:/jsonplaceholder.typicode.com/posts/?_limit=10')
+    new URL('https://jsonplaceholder.typicode.com/posts/?_limit=10')
   )
   const posts = await res.json()
   return posts
@@ -10,7 +10,7 @@ export const getAllPostData = async () => {
 
 export const getAllTasksData = async () => {
   const res = await fetch(
-    new URL('https:/jsonplaceholder.typicode.com/todos/?_limit=10')
+    new URL('https://jsonplaceholder.typicode.com/todos/?_limit=10')
   )
   const tasks = await res.json()
   return tasks
@@ -18,7 +18,7 @@ export const getAllTasksData = async () => {
 
 export const getAllPostIds = async () => {
   const res = await fetch(
-    new URL('https:/jsonplaceholder.typicode.com/posts/?_limit=10')
+    new URL('https://jsonplaceholder.typicode.com/posts/?_limit=10')
   )
   const posts = await res.json()
   return posts.map((post) => {
@@ -32,7 +32,7 @@ export const getAllPostIds = async () => {
 
 export const getPostData = async (id: string) => {
   const res = await fetch(
-    new URL(`https:/jsonplaceholder.typicode.com/posts/${id}`)
+    new URL(`https://jsonplaceholder.typicode.com/posts/${id}`)
   )
   const post = await res.json()
   return post
